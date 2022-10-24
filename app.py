@@ -32,13 +32,13 @@ def checkNumber():
     number = request.form['number']
     # Write your to code here to check whether number is even or odd and render result.html page
     if number.isnumeric() == False:
-        results = "Not a number."
+        results = "Provided input is not an integer!"
     elif int(number) % 2 == 0:
         results =  number + " is even."
     elif int(number) % 2 != 0:
         results = number + " is odd."
     if len(number) == 0:
-        results = "Please enter a value."
+        results = "No number provided."
 
     return render_template('result.html', results=results)
 
