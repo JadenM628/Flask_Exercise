@@ -52,7 +52,7 @@ def displayRegistrationPage():
     # Get student name and organisation from form.
     studentName = request.form['name']
     studentOrg = request.form['orgs']
-    studentOrganisationDetails[studentName]=studentOrg
     # Append this value to studentOrganisationDetails
+    studentOrganisationDetails[studentName]=studentOrg
     # Display studentDetails.html with all students and organisations
     return render_template('StudentDetails.html', studentOrganisationDetails=studentOrganisationDetails)
